@@ -651,12 +651,146 @@ footer {
   transition: opacity 250ms var(--ttf);
 }
 
-.modal button {
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--color-main-text);
+}
+
+.modal-close {
+  background-color: #eeeeee;
   position: absolute;
   right: 0px;
   padding: 0;
   margin: 5px;
   width: 30px;
   height: 30px;
+  border: none;
   border-radius: 50%;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  cursor: pointer;
+  fill: var(--color-hover);
+}
+.modal-header {
+  box-sizing: border-box;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 12px;
+}
+
+.modal-field {
+  position: relative;
+}
+
+.modal-field input {
+  margin-left: 40px;
+  width: 448px;
+  height: 40px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  padding-left: 35px;
+}
+
+.modal-field:hover {
+  cursor: pointer;
+  fill: var(--color-hover);
+}
+
+.modal-field input:hover,
+.modal-field input:focus {
+  cursor: pointer;
+  border-color: var(--color-hover);
+}
+
+.modal-field textarea:hover,
+.modal-field textarea:focus {
+  cursor: pointer;
+  border-color: var(--color-hover);
+}
+
+.modal-label {
+  font-size: 12px;
+  display: inline-block;
+  margin-left: 40px;
+  margin-bottom: 4px;
+  color: var(--color-address-text);
+}
+
+.modal-icon {
+  display: inline-block;
+  position: absolute;
+  top: 45%;
+  right: 87%;
+}
+
+.modal-field textarea {
+  resize: none;
+  margin-left: 40px;
+  height: 120px;
+  width: 448px;
+  padding-left: 16px;
+  padding-top: 12px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.modal-field textarea::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  vertical-align: top;
+}
+
+.modal-checkbox {
+  appearance: none;
+}
+
+.modal-checkbox:checked + .accept-icon {
+  border-color: var(--color-hover);
+  background-color: var(--color-hover);
+  background-image: url("../Images/icon-check.svg");
+  background-size: contain;
+}
+
+.accept-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--color-main-text);
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+.modal-accept {
+  display: inline-flex;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.modal-accept a {
+  text-decoration: underline;
+  margin-left: 5px;
+}
+
+.modal-submit {
+  width: 200px;
+  height: 50px;
+  color: var(--color-contrast-text);
+  letter-spacing: 0.06em;
+  line-height: 30px;
+  font-weight: bold;
+  margin: auto;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  background-color: var(--color-hover);
 }
